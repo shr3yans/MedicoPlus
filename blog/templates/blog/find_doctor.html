@@ -1,0 +1,33 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<div align="centre">
+    <h1>Book an Appointment:</h1>
+    <form method = "GET" action="book_appointment">
+
+        <input name="d_id3" type="text" placeholder="doc id">
+        <br> <br>
+        <input type="submit" value="Book Appointment">
+        <br> <br>
+    </form>
+</div>
+        <table id="t01">
+  <tr>
+      <th>DOC ID</th>
+    <th>DOCTOR</th>
+    <th>DEPARTMENT</th>
+    <th>START TIME</th>
+    <th>END TIME</th>
+  </tr>
+    {% if doct %}
+            {% for i in doct %}
+                <tr>
+                    {% for j in i %}
+                        <td>{{ j }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+    {% endif %}
+</table>
+
+{% endblock %}

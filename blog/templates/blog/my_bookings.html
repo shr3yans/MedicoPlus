@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+<h1>Appointment booked!</h1>
+  <table id="t01">
+  <tr>
+    <th>PATIENT</th>
+    <th>EMAIL</th>
+      <th>DOCTOR</th>
+    <th>PROBABLE START TIME</th>
+  </tr>
+  {% if doct %}
+            {% for i in doct %}
+                <tr>
+                    {% for j in i %}
+                        <td>{{ j }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+    {% endif %}
+</table>
+
+{% endblock %}

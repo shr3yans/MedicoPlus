@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani&display=swap" rel="stylesheet">
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>MedicoPlus</title>
+    <link rel="icon" type="image/png" href="https://cdn4.iconfinder.com/data/icons/healthcare-medical-linear-black-green/2048/Stethoscope-512.png"/>
+</head>
+<body style="background-color: teal">
+<div class="header">
+	<a href="{% url 'mp' %}" class="logo">
+		<img src="https://cdn4.iconfinder.com/data/icons/healthcare-medical-linear-black-green/2048/Stethoscope-512.png" width='60' height='60'>MedicoPlus
+	</a>
+	<div class="header-right">
+		<a href="{% url 'mp' %}">Home</a>
+		<a href="{% url 'fd' %}" target="_blank">Find Doctor</a>
+    </div>
+</div>
+
+
+
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-15">
+                 {% block content %}
+                 {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
