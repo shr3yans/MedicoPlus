@@ -3,11 +3,11 @@
 {% block content %}
 <div align="centre">
     <h1>Book an Appointment:</h1>
-    <form method = "GET" action="book_appointment">
-
+    <form method = "POST" action="book_appointment">
+        {% csrf_token %}
         <input name="d_id3" type="text" placeholder="doc id">
         <br> <br>
-        <input type="submit" value="Book Appointment">
+        <input type="submit" value="Book Appointment" >
         <br> <br>
     </form>
 </div>

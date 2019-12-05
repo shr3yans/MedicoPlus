@@ -8,5 +8,5 @@ urlpatterns = [
     url(r'^find_doctor$',views.fd,name='fd'),
     url(r'^my_bookings$',views.mb,name='mb'),
     url(r'^book_appointment$',views.ba,name='ba'),
-
+    url(r'^all_appointment$', views.alll, name='alll'),
 ]
